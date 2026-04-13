@@ -19,7 +19,7 @@ int msgid;
 
 void* sender(void* arg) {
     struct msgbuf buf;
-    buf.mtype = 2; // CHÚ Ý: Node B gửi tin nhắn với nhãn loại 2
+    buf.mtype = 2;
 
     while (1) {
         fgets(buf.mtext, MAX_TEXT, stdin);
@@ -30,7 +30,7 @@ void* sender(void* arg) {
         }
 
         if (strcmp(buf.mtext, "end") == 0) {
-            printf("[System]: Bạn đã rời khỏi đoạn chat.\n");
+            printf("Bạn đã thoát khỏi đoạn chat.\n");
             exit(0);
         }
     }
@@ -41,14 +41,14 @@ void* receiver(void* arg) {
     struct msgbuf buf;
 
     while (1) {
-        // CHÚ Ý: Node B chỉ đọc các tin nhắn có nhãn loại 1 (do Node A gửi)
         if (msgrcv(msgid, &buf, sizeof(buf.mtext), 1, 0) == -1) {
             perror("msgrcv failed");
             exit(1);
         }
 
         if (strcmp(buf.mtext, "end") == 0) {
-            printf("[System]: Đối tác đã rời khỏi đoạn chat. Nhấn Enter để thoát.\n");
+            printf("Sys: Đối phương đã thoát khỏi đoạn chat.\n");
+            printf("Nhấn Enter để thoát.\n")
             exit(0);
         }
 
@@ -64,7 +64,7 @@ int main() {
         return 1;
     }
 
-    printf("=== CHAT NODE B ĐÃ SẴN SÀNG ===\n");
+    printf("===> CHAT NODE B\n");
     printf("Nhập tin nhắn và nhấn Enter để gửi. Gõ 'end' để kết thúc.\n");
 
     pthread_t send_tid, recv_tid;

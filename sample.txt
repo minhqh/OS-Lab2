@@ -1,0 +1,28 @@
+1. Mục tiêu bài
+- Bài này hiện thực yêu cầu gì của đề.
+
+2. Danh sách file
+- Liệt kê các file chính trong thư mục.
+- Nêu file nào là source code chính.
+- Nêu file input/data nếu có.
+
+3. Cách build
+- Ghi rõ lệnh build.
+- Nếu dùng Makefile thì ghi lệnh make.
+- Nếu compile trực tiếp thì ghi lệnh gcc cụ thể.
+
+4. Cách chạy
+- Ghi rõ lệnh chạy chương trình.
+- Nếu có tham số dòng lệnh thì phải nêu ví dụ đầy đủ.
+
+5. Input / Output
+- Chương trình nhận input gì.
+- Kết quả đầu ra mong đợi là gì.
+
+6. Ý tưởng hiện thực
+- Mô tả ngắn cách giải.
+- Nêu rõ dùng process/thread/IPC/mmap như thế nào.
+- Nếu đề mở, phải mô tả rõ thiết kế để giảng viên hiểu bài làm.
+
+7. Ghi chú thêm (nếu có)
+- Các lưu ý cần biết khi chạy.

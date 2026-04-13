@@ -63,7 +63,7 @@ int main(int argc, char * argv[])
         exit(1);
     } else if (pid1 == 0) {
         // Child 1
-        process_file("movie-100k_1.txt", shared->child1_data);
+        process_file("movie-100k-split/movie-100k_1.txt", shared->child1_data);
         shmdt(shared);
         exit(0); 
     }
@@ -74,7 +74,7 @@ int main(int argc, char * argv[])
         exit(1);
     } else if (pid2 == 0) {
         // Child 2
-        process_file("movie-100k_2.txt", shared->child2_data);
+        process_file("movie-100k-split/movie-100k_2.txt", shared->child2_data);
         shmdt(shared); 
         exit(0); 
     }
