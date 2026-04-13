@@ -49,7 +49,7 @@ void* receiver(void* arg) {
 
         if (strcmp(buf.mtext, "end") == 0) {
             printf("Sys: Đối phương đã thoát khỏi đoạn chat.\n");
-            printf("Nhấn Enter để thoát.\n")
+            printf("Nhấn Enter để thoát.\n");
             exit(0); 
         }
 
